@@ -136,14 +136,7 @@ variables s t : list α
 variable a : α
 
 example : length (s ++ t) = length s + length t :=
-begin
-  induction s with s ih, change length t + 0 = 0 + _,
-  rw[zero_add], refl,
-  rw[(by refl : (s::ih) ++ t = s :: (ih ++ t))],
-  change length (ih ++ t) + 1 = _ + 1 + _,
-  rw[s_ih,add_assoc,add_assoc,
-     (by apply add_comm : length t + 1 = 1 + length t)]
-end
+sorry
 
 end
 
