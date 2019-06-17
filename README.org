@@ -28,13 +28,13 @@ The exercises are in the ~/src~ directory.
 |--------------+------------------------------+----------------------------------+----------------------------------------+---------------------------------------------|
 |  10:55-11:10 | Morning break                | Morning break                    | Morning break                          | Morning break                               |
 |--------------+------------------------------+----------------------------------+----------------------------------------+---------------------------------------------|
-|  11:10-12:00 | Lewis                        | Baek                             | van Doorn                              | Mark Adams                                  |
+|  11:10-12:00 | Lewis                        | Vajjha                           | van Doorn                              | Mark Adams                                  |
 |              | Introduction to Lean I       | Introduction to metaprogramming  | Best practices for library-building I  | Organization of formal abstracts            |
 |              | (Chapters 6 and 1-3 of TPIL) |                                  |                                        |                                             |
 |--------------+------------------------------+----------------------------------+----------------------------------------+---------------------------------------------|
 | 12:00 - 1:45 | Lunch                        | Lunch                            | Lunch                                  | Lunch                                       |
 |--------------+------------------------------+----------------------------------+----------------------------------------+---------------------------------------------|
-|    1:45-2:35 | Trung                        | Vajjha                           | van Doorn                              | Hales                                       |
+|    1:45-2:35 | Trung                        | Baek                             | van Doorn                              | Hales                                       |
 |              | Introduction to Lean II      | Writing tactics                  | Best practices for library-building II | Formal abstracts - the way forward          |
 |              | (Chapters 5-8 of TPIL)       |                                  |                                        | Suggested projects                          |
 |--------------+------------------------------+----------------------------------+----------------------------------------+---------------------------------------------|
