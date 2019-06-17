@@ -1,4 +1,24 @@
 * Are you ready for Lean in Hanoi?
+This repository contains exercises and supplementary materials for the [[https://hanoilean2019.wordpress.com][Hanoi Lean 2019 workshop]].
+
+To get started, first make sure that Lean is installed and you have the ~update-mathlib~ script (see [[https://github.com/leanprover-community/mathlib/blob/master/docs/install/][install instructions here]]).
+
+Open a terminal and run
+
+#+begin_src bash
+
+git clone https://www.github.com/jesse-michael-han/hanoi-lean-2019
+
+cd hanoi-lean-2019
+
+leanpkg configure
+
+update-mathlib
+
+#+end_src
+
+The exercises are in the ~/src~ directory.
+
 ** Schedule
 |--------------+------------------------------+----------------------------------+----------------------------------------+---------------------------------------------|
 |              | DAY 1 (introduction, basics) | DAY 2 (tactics, metaprogramming) | DAY 3 (mathlib, library-building)      | DAY 4 (formal abstracts, formal blueprints) |
