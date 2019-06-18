@@ -7,7 +7,12 @@ section
 
 local attribute [instance] classical.prop_decidable
   
-  theorem not_or_of_imp (h : a → b) : ¬ a ∨ b := sorry
+  theorem not_or_of_imp (h : a → b) : ¬ a ∨ b := 
+begin
+  by_cases H : a,
+   from or.inr (h ‹_›),
+   from or.inl ‹_›
+end
   
   theorem imp_iff_not_or : (a → b) ↔ (¬ a ∨ b) := sorry
   
