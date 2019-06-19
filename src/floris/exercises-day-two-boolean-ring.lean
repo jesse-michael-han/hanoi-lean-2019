@@ -32,10 +32,9 @@ Given a Boolean ring R, for x and y in R we can define
 
     ¬x = 1 ⊕ x.
 
-These operations then satisfy all of the axioms for meets, joins, and complements in a Boolean algebra. Thus every Boolean ring becomes a Boolean algebra. 
+These operations then satisfy all of the axioms for meets, joins, and complements in a Boolean algebra. Thus every Boolean ring becomes a Boolean algebra.
 -/
-
-local notation x ` ⊕ ` y:= (x : α) + (y : α)
+local notation x ` ⊕ ` y := (x : α) + (y : α)
 
 /- Every Boolean ring R satisfies x ⊕ x = 0 for all x in R, because we know
 
@@ -47,9 +46,7 @@ and since (R,⊕) is an abelian group, we can subtract x ⊕ x from both sides o
 
  and this yields xy ⊕ yx = 0, which means xy = yx (using the first property above). -/
 
-/- EXERCISE: Prove a lemma which says that ∀ x : α, x ⊕ x = 0.-/
-
-/- According to the above, we define custom notation for addition in α -/
+/- EXERCISE: Prove a lemma which says that ∀ x : α, x ⊕ x = 0 and a lemma that multiplication commutes.-/
 
 
 /- EXERCISE: Given the boolean_ring instance on α, construct the boolean_algebra instance on α. -/
