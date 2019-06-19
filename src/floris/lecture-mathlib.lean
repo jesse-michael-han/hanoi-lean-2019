@@ -48,10 +48,13 @@ import data.rat.basic tactic.norm_num
   * Search on Github
   * Potentially: `#print prefix` and `#print instances`
 -/
-
+-- useful: alt+left (option+cmd+left on Mac) to jump to previous location
+-- or use ctrl+tab (option+cmd+tab on Mac) to navigate between VSCode tabs.
 #print is_group_hom
-
 #check tactic.assumption
+#print prefix nat
+#print instances group
+
 
 /-
   Use the command `update-mathlib` to download compiled version of mathlib.
@@ -82,6 +85,11 @@ import data.rat.basic tactic.norm_num
     leanpkg configure
     update-mathlib
   ```
+  To update mathlib, run
+  ```
+    leanpkg upgrade
+    update-mathlib
+  ```
 -/
 
 /-
@@ -92,6 +100,26 @@ import data.rat.basic tactic.norm_num
   * If you are done, make a pull request on Github. After that it will be reviewed.
 -/
 
+/- If `e : t` then `e.foo` is the same as `t.foo e`-/
+example (n m : ℕ) : nat.gcd n m = n.gcd m :=
+by reflexivity
+
+lemma mul_eq_mul_left {α} [integral_domain α] {a b c : α} (ha : a ≠ 0) :
+  a * b = a * c ↔ b = c :=
+⟨eq_of_mul_eq_mul_left ha, λ h, by rw h⟩
+
 open rat
-lemma rat.coe_num_eq_iff (r : ℚ) : (r.num : ℚ) = r ↔ r.denom = 1 :=
-sorry
+local infix ` /. `:70 := mk
+lemma rat.coe_num_eq_iff (r : ℚ) :
+  (r.num : ℚ) = r ↔ r.denom = 1 :=
+begin
+  rw [coe_int_eq_mk],
+  conv { to_lhs, to_rhs, rw [num_denom r] },
+  rw [mk_eq],
+  { by_cases h : r.num = 0,
+    { simpa [h] using r.cop },
+    { rw [mul_eq_mul_left h], norm_cast }
+   },
+   norm_num,
+   simpa using r.denom_ne_zero
+end
